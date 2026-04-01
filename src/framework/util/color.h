@@ -81,6 +81,7 @@ public:
             std::min<float>(1.0f, m_b + other.m_b), std::min<float>(1.0f, m_a + other.m_a));
     }
 
+    Color(const Color& other) = default;
     Color& operator=(const Color& other) { m_r = other.m_r; m_g = other.m_g; m_b = other.m_b; m_a = other.m_a; return *this; }
     bool operator==(const Color& other) const {
         if (std::abs(other.m_r - m_r) > 0.001) return false;

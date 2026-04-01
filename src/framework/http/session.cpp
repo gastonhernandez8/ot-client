@@ -121,7 +121,7 @@ void HttpSession::on_read_header(const boost::system::error_code& ec, size_t byt
 
     auto msg = m_response.get();
     m_result->status = msg.result_int();
-    m_result->size = atoi(std::string(msg["Content-Length"]).c_str());
+    m_result->size = atoi(std::string(msg["Content-Length"])].c_str());
     auto location = msg["Location"];
 
     if (!location.empty()) {        
